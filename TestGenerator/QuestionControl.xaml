@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="TestGenerator.QuestionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestGenerator"
+             mc:Ignorable="d" 
+             d:DesignHeight="288.572" d:DesignWidth="360.952">
+    <Grid>
+        <StackPanel>
+            <Label Content="Название вопроса:"/>
+            <TextBox x:Name="NameTB" TextWrapping="Wrap" Text="{Binding Path=Name}" Margin="5,0" />
+            <Label Content="Текст вопроса:"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding FinalText}" Margin="5,0" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Height="75"/>
+            <Label Content="Ответы:"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Оценка" />
+                <Label Content="Текст ответа" Grid.Column="1" />
+            </Grid>
+            <StackPanel x:Name="AnswersSP"></StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="TestGenerator.AnswerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestGenerator"
+             mc:Ignorable="d" 
+             d:DesignHeight="104.762" d:DesignWidth="411.429">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Height="26" Margin="5" TextWrapping="Wrap" Text="{Binding Path=Grade}" VerticalAlignment="Top"/>
+        <TextBox Grid.Column="1" Height="67" Margin="5" TextWrapping="Wrap" Text="{Binding Path=FinalText}" VerticalAlignment="Top"  VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+
+    </Grid>
+</UserControl>
